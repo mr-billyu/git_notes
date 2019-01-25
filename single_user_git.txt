@@ -33,6 +33,26 @@ Commit files:
     git commit README
         add comment.
 
+Create branch:
+    git branch develop
+
+Change branch:
+    git checkout develop
+    git checkout master
+
+
+
+========= REMOTE =========
+Remote can be another server, cloud server, GitHub, etc
+
+GitHub:
+    Sign on GitHub and create repository for git_notes.
+
+    Associate local repository with GitHub repository:
+        git remote add server https://github.com/mr-billyu/git_notes.git
+
+    Push local repository to GitHub:
+        git push server master
 
 
 
