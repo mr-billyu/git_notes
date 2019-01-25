@@ -52,6 +52,16 @@ Merge branch to master:
         git checkout master
         git merge develop
 
+Rename file:
+    git mv [original file] [renamed file]
+        Changes the file name and prepares it for
+        commit.
+
+Remove file:
+    git rm [file]
+        Removes the file from the working directory and
+        stages the deletion.
+
 ========= REMOTE =========
 Remote can be another server, cloud server, GitHub, etc
 
@@ -63,6 +73,9 @@ GitHub:
 
     Push local repository to GitHub:
         git push server master
+        git push server develop
+
+
 
 
 
