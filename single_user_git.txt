@@ -40,7 +40,17 @@ Change branch:
     git checkout develop
     git checkout master
 
+Delete branch:
+    git branch -d [branch]
 
+Merge branch to master:
+    Commit all files in branch.
+        git checkout develop
+        git add single_user_git.txt
+        git commit single_user_git.txt
+
+        git checkout master
+        git merge develop
 
 ========= REMOTE =========
 Remote can be another server, cloud server, GitHub, etc
