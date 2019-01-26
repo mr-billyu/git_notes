@@ -12,6 +12,16 @@ Show status of files:
     git status
         Shows status of files in directory.
 
+Show commit messages for current branch:
+    git log --oneline
+    OR:
+    git log
+
+Show commit messages for file
+    git log --oneline filename
+    OR:
+    git log filename
+
 Add file so git can track:
     git add single_user_git.txt
         This command stages the file for the next commit.
@@ -32,12 +42,27 @@ Commit files:
         Add comment.
     git commit README
         add comment.
+    OR:
+    git commit -a
+        Stages and commits all files that have been modified and 
+        deleted.
 
 Show branches:
     git branch
 
 Create branch:
     git branch develop
+
+Show files tracked by git:
+    git ls-files
+
+Show file differences:
+    Show diff between working directory and index:
+        git diff
+    Show diff between index and last commit:
+        git diff -cache
+    Show diff between working directory and last commit
+        git diff HEAD
 
 Change branch:
     git checkout develop
@@ -55,8 +80,8 @@ Merge branch to master:
         git checkout master
         git merge develop
 
-Rename file:
-    git mv [original file] [renamed file]
+Rename file or directory:
+    git mv [original file/dir] [renamed file/dir]
         Changes the file name and prepares it for
         commit.
 
