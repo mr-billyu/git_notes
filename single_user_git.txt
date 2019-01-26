@@ -4,9 +4,13 @@ Create repository:
         Run this command from ~/Applications and it will create
         git repository ~/Applications/git_notes.
 
-Create note file:
-    gvim single_user_git.txt
+Create file:
+    gvim file
         Enter data to file and save.
+
+Add create file so git can track:
+    git add file
+        This command stages the file for the next commit.
 
 Show status of files:
     git status
@@ -18,28 +22,24 @@ Show commit messages for current branch:
     git log
 
 Show commit messages for file
-    git log --oneline filename
+    git log --oneline file
     OR:
-    git log filename
-
-Add new file so git can track:
-    git add filename
-        This command stages the file for the next commit.
+    git log file
 
 Unstage file:
     git reset
-        Changes filename back to untracked status.
+        Changes file back to untracked status.
 
 Stage modified files to be commited:
-    git add filename
+    git add file
 
 Commit staged files:
     git commit
         Add comments.
 
 Stage and Commit file(s):
-    git commit filename
-        Stages and commits filename.
+    git commit filee
+        Stages and commits file.
     git commit -a
         Stages and commits all files that have been modified and 
         deleted.
@@ -50,30 +50,27 @@ Show branches:
 Create branch:
     git branch develop
 
-Show files tracked by git:
-    git ls-files
-
-Show file differences:
-    Show diff between working directory and index:
-        git diff
-    Show diff between index and last commit:
-        git diff -cache
-    Show diff between working directory and last commit
-        git diff HEAD
-
 Change branch:
     git checkout develop
     git checkout master
 
+Show files tracked by git:
+    git ls-files
+
+Show file differences:
+    git diff
+        Show diff between working directory and index:
+    git diff -cache
+        Show diff between index and last commit:
+    git diff HEAD
+        Show diff between working directory and last commit
+
 Delete branch:
     git branch -d [branch]
 
-Merge branch to master:
-    Commit all files in branch.
-        git checkout develop
-        git add single_user_git.txt
-        git commit single_user_git.txt
-
+Merge develop branch to master:
+    Commit all files in develop branch. See Stage and Commit above.
+    Then:
         git checkout master
         git merge develop
 
@@ -96,7 +93,7 @@ GitHub:
     Associate local repository with GitHub repository:
         git remote add server https://github.com/mr-billyu/git_notes.git
 
-    Push local repository to GitHub:
+    Push local branches to GitHub repository:
         git push server master
         git push server develop
 
