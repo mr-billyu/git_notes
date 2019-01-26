@@ -6,7 +6,7 @@ Create repository:
 
 Create note file:
     gvim single_user_git.txt
-        Enter date to file and save file
+        Enter data to file and save.
 
 Show status of files:
     git status
@@ -22,27 +22,24 @@ Show commit messages for file
     OR:
     git log filename
 
-Add file so git can track:
-    git add single_user_git.txt
+Add new file so git can track:
+    git add filename
         This command stages the file for the next commit.
 
 Unstage file:
     git reset
-        Changes single_user_git.txt back to untracked status.
+        Changes filename back to untracked status.
 
-Create README file:
-    gvim README
+Stage modified files to be commited:
+    git add filename
 
-Stage files to be commited:
-    git add single_user_git.txt
-    git add README
+Commit staged files:
+    git commit
+        Add comments.
 
-Commit files:
-    git commit single_user_git.txt
-        Add comment.
-    git commit README
-        add comment.
-    OR:
+Stage and Commit file(s):
+    git commit filename
+        Stages and commits filename.
     git commit -a
         Stages and commits all files that have been modified and 
         deleted.
