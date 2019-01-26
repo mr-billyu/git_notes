@@ -8,13 +8,34 @@ Create file:
     gvim file
         Enter data to file and save.
 
-Add create file so git can track:
+Add created file to git:
     git add file
         This command stages the file for the next commit.
 
-Show status of files:
+Show status of working directory:
     git status
         Shows status of files in directory.
+
+Show files tracked by git:
+    git ls-files
+
+Stage modified files to be commited:
+    git add file
+
+Unstage file:
+    git reset
+        Changes file back to untracked status.
+
+Commit staged files:
+    git commit
+        Add comments.
+
+Stage and Commit file(s):
+    git commit file
+        Stages and commits file.
+    git commit -a
+        Stages and commits all files that have been modified and 
+        deleted.
 
 Show commit messages for current branch:
     git log --oneline
@@ -26,24 +47,6 @@ Show commit messages for file
     OR:
     git log file
 
-Unstage file:
-    git reset
-        Changes file back to untracked status.
-
-Stage modified files to be commited:
-    git add file
-
-Commit staged files:
-    git commit
-        Add comments.
-
-Stage and Commit file(s):
-    git commit filee
-        Stages and commits file.
-    git commit -a
-        Stages and commits all files that have been modified and 
-        deleted.
-
 Show branches:
     git branch
 
@@ -54,8 +57,8 @@ Change branch:
     git checkout develop
     git checkout master
 
-Show files tracked by git:
-    git ls-files
+Delete branch:
+    git branch -d [branch]
 
 Show file differences:
     git diff
@@ -64,9 +67,6 @@ Show file differences:
         Show diff between index and last commit:
     git diff HEAD
         Show diff between working directory and last commit
-
-Delete branch:
-    git branch -d [branch]
 
 Merge develop branch to master:
     Commit all files in develop branch. See Stage and Commit above.
@@ -97,7 +97,14 @@ GitHub:
         git push server master
         git push server develop
 
+Clone a repository:
+    Change to the directory that will be the parent of the clone.
+    ie. ~/Applications
 
+        git clone url
+
+    The clone directory will have been created under the parent 
+    directory.  ie. ~/Applications/clone_dir
 
 
 
