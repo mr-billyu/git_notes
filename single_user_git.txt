@@ -61,14 +61,14 @@ Change branch:
         git checkout branch
 
 Delete branch:
-    git branch -d [branch]
+    git branch -d branch
 
 Show file differences:
-    git diff
+    git diff [filename]
         Show diff between working directory and index:
-    git diff -cache
+    git diff --cached [filename]
         Show diff between index and last commit:
-    git diff HEAD
+    git diff HEAD [filename]
         Show diff between working directory and last commit
 
 Merge develop branch to master:
