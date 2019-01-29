@@ -64,12 +64,15 @@ Delete branch:
     git branch -d branch
 
 Show file differences:
-    git diff [filename]
+    git diff filename
         Show diff between working directory and index:
-    git diff --cached [filename]
+    git diff --cached filename
         Show diff between index and last commit:
-    git diff HEAD [filename]
+    git diff HEAD filename
         Show diff between working directory and last commit
+
+Show old version of file:
+    git show SHA:file
 
 Merge develop branch to master:
     Commit all files in develop branch. See Stage and Commit above.
@@ -78,12 +81,12 @@ Merge develop branch to master:
         git merge develop
 
 Rename file or directory:
-    git mv [original file/dir] [renamed file/dir]
+    git mv 'original file/dir' 'renamed file/dir'
         Changes the file name and prepares it for
         commit.
 
 Remove file:
-    git rm [file]
+    git rm file
         Removes the file from the working directory and
         stages the deletion.
 
