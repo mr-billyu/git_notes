@@ -87,6 +87,9 @@ Remove file:
         Removes the file from the working directory and
         stages the deletion.
 
+List git configuration:
+    git config -l
+
 ========= REMOTE =========
 Remote can be another server, cloud server, GitHub, etc
 
