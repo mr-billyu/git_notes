@@ -96,6 +96,9 @@ GitHub:
     Associate local repository with GitHub repository:
         git remote add server https://github.com/mr-billyu/git_notes.git
 
+    Rename remote
+        git remote rename old_name new_name
+
     Push local branches to GitHub repository:
         git push server master
         git push server develop
