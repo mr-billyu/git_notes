@@ -23,8 +23,12 @@ Stage modified files to be commited:
     git add file
 
 Unstage file:
-    git reset
+    git reset HEAD file
         Changes file back to untracked status.
+
+Get fresh copy of file
+    git checkout file
+        Changes file back to last commit.
 
 Commit staged files:
     git commit
