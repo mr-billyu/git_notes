@@ -90,6 +90,11 @@ Remove file:
 List git configuration:
     git config -l
 
+Configure difftool:
+    git config --global diff.tool gvimdiff
+    git config --global difftool.prompt false
+    git config --global alias.d difftool
+
 ========= REMOTE =========
 Remote can be another server, cloud server, GitHub, etc
 
