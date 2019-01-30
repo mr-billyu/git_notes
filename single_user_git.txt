@@ -100,6 +100,18 @@ Remove file:
         Removes the file from the working directory and
         stages the deletion.
 
+Git tags:
+    git tag
+        List all tags.
+    git tag -a v1.0 -m "v1.0 of file|project|etc"
+        Adds tag to current commit. 
+    git tag -a v1.0 -m "v1.0 of file|project|etc" SHA
+        Adds tag to SHA commit.
+    git show v1.0
+        Displays detail about tag v1.0.
+    git tag -d v1.0
+        Deletes tag v1.0.
+
 List git configuration:
     git config -l
 
