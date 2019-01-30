@@ -63,15 +63,21 @@ Change branch:
 Delete branch:
     git branch -d branch
 
-Show file differences:
-    git diff filename
-        Show diff between working directory and index:
-    git diff --cached filename
-        Show diff between index and last commit:
-    git diff HEAD filename
-        Show diff between working directory and last commit
+Configure difftool:
+    git config --global diff.tool gvimdiff
+    git config --global difftool.prompt false
+    git config --global alias.d difftool
 
-Show old version of file:
+Show file differences:
+    Note: 'd' is an alias for difftool.
+    git d filename
+        Show differences between working directory and index:
+    git d --cached filename
+        Show differences between index and last commit:
+    git d HEAD filename
+        Show differences between working directory and last commit
+
+Show specified version of file:
     git show SHA:file
 
 Merge develop branch to master:
@@ -92,11 +98,6 @@ Remove file:
 
 List git configuration:
     git config -l
-
-Configure difftool:
-    git config --global diff.tool gvimdiff
-    git config --global difftool.prompt false
-    git config --global alias.d difftool
 
 ========= REMOTE =========
 Remote can be another server, cloud server, GitHub, etc
