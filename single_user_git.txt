@@ -75,11 +75,13 @@ Configure difftool:
 Show file differences:
     Note: 'd' is an alias for difftool.
     git d filename
-        Show differences between working directory and index:
+        Show differences between working directory and index.
     git d --cached filename
-        Show differences between index and last commit:
+        Show differences between index and last commit.
     git d HEAD filename
-        Show differences between working directory and last commit
+        Show differences between working directory and last commit.
+    git d master develop filename
+        Compare files from two different branches.
 
 Show specified version of file:
     git show SHA:file
