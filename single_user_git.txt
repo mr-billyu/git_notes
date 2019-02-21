@@ -90,6 +90,9 @@ Merge develop branch to master:
         git checkout master
         git merge develop
 
+Undo merge
+    git reset --merge ORIG_HEAD
+
 Rename file or directory:
     git mv 'original file/dir' 'renamed file/dir'
         Changes the file name and prepares it for
