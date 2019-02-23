@@ -80,6 +80,8 @@ Show file differences:
         Show differences between index and last commit:
     git d HEAD filename
         Show differences between working directory and last commit
+    git d branch1 branch2 -- filename
+        Show differences between filename on branch1 vs branch2
 
 Show specified version of file:
     git show SHA:file
@@ -92,6 +94,12 @@ Merge develop branch to master:
 
 Undo merge
     git reset --merge ORIG_HEAD
+
+Update branch with changes from master:
+    Commit all files in branch.
+    Then:
+        git checkout branch
+        git merger master
 
 Rename file or directory:
     git mv 'original file/dir' 'renamed file/dir'
