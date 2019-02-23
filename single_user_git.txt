@@ -75,13 +75,13 @@ Configure difftool:
 Show file differences:
     Note: 'd' is an alias for difftool.
     git d filename
-        Show differences between working directory and index:
+        Show differences between working directory and index.
     git d --cached filename
-        Show differences between index and last commit:
+        Show differences between index and last commit.
     git d HEAD filename
-        Show differences between working directory and last commit
-    git d branch1 branch2 filename
-        Show differences between filename on branch1 vs branch2
+        Show differences between working directory and last commit.
+    git d master develop filename
+        Compare files from two different branches.
 
 Show specified version of file:
     git show SHA:file
@@ -110,6 +110,18 @@ Remove file:
     git rm file
         Removes the file from the working directory and
         stages the deletion.
+
+Git tags:
+    git tag
+        List all tags.
+    git tag -a v1.0 -m "v1.0 of file|project|etc"
+        Adds tag to current commit. 
+    git tag -a v1.0 -m "v1.0 of file|project|etc" SHA
+        Adds tag to SHA commit.
+    git show v1.0
+        Displays detail about tag v1.0.
+    git tag -d v1.0
+        Deletes tag v1.0.
 
 List git configuration:
     git config -l
