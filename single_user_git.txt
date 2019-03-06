@@ -99,7 +99,7 @@ Update branch with changes from master:
     Commit all files in branch.
     Then:
         git checkout branch
-        git merger master
+        git merge master
 
 Rename file or directory:
     git mv 'original file/dir' 'renamed file/dir'
