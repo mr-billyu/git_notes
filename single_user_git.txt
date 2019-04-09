@@ -135,8 +135,12 @@ GitHub:
     Associate local repository with GitHub repository:
         git remote add server https://github.com/mr-billyu/git_notes.git
 
+    View existing remotes
+        git remote -v
+
     Rename remote
         git remote rename old_name new_name
+        Example: git remote rename origin server
 
     Push local branches to GitHub repository:
         git push server master
