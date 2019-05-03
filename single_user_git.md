@@ -63,109 +63,143 @@ It is wise to run `git status` before and after a commit.
         git log file
         git log --oneline file
 
-Show branches:
-    git branch
+###Display branches
 
-Create branch:
-    git branch develop
+        git branch
 
-Change branch:
-    First:
-        git commit -a
-            This saves work in current branch
-    Then:
-        git checkout branch
+###Create branch
 
-Delete branch:
-    git branch -d branch
+        git branch develop
 
-Configure difftool:
-    git config --global diff.tool gvimdiff
-    git config --global difftool.prompt false
-    git config --global alias.d difftool
+###Change branch
 
-Show file differences:
-    Note: 'd' is an alias for difftool.
-    git d filename
-        Show differences between working directory and index.
-    git d --cached filename
-        Show differences between index and last commit.
-    git d HEAD filename
-        Show differences between working directory and last commit.
-    git d master develop filename
-        Compare files from two different branches.
+        git commit -a   # Save work in current branch
+        git checkout branch-name
 
-Show specified version of file:
-    git show SHA:file
+###Delete branch
 
-Merge develop branch to master:
-    Commit all files in develop branch. See Stage and Commit above.
-    Then:
-        git checkout master
+        git branch -d branch-name
+
+###Merge develop branch to master
+
+        git commit -a          # Save work in develop branch
+        git checkout master   
         git merge develop
 
-Undo merge
-    git reset --merge ORIG_HEAD
+###Update branch with changes from master
 
-Update branch with changes from master:
-    Commit all files in branch.
-    Then:
         git checkout branch
-        git merge master
+        git commit -a          # Save work in branch
+        git merge master 
 
-Rename file or directory:
-    git mv 'original file/dir' 'renamed file/dir'
-        Changes the file name and prepares it for
-        commit.
+###Show file differences
 
-Remove file:
-    git rm file
-        Removes the file from the working directory and
-        stages the deletion.
+**Note:** `d` is an alias for `difftool`.
 
-Git tags:
-    git tag
-        List all tags.
-    git tag -a v1.0 -m "v1.0 of file|project|etc"
-        Adds tag to current commit. 
-    git tag -a v1.0 -m "v1.0 of file|project|etc" SHA
-        Adds tag to SHA commit.
-    git show v1.0
-        Displays detail about tag v1.0.
-    git tag -d v1.0
-        Deletes tag v1.0.
+Display differences between working directory and index.
 
-List git configuration:
-    git config -l
+        git d filename
 
-========= REMOTE =========
+Display differences between index and last commit.
+
+        git d --cached filename
+
+Display differences between working directory and last commit.
+
+        git d HEAD filename
+
+Display differences between two branches.
+
+        git d master develop filename
+
+###Display specified version of file
+
+        git show SHA:file
+
+###Undo merge
+
+        git reset --merge ORIG_HEAD
+
+###Rename file or directory
+
+Change the file name and prepare it for commit.
+
+        git mv 'original file/dir' 'renamed file/dir'
+
+###Remove file
+
+Remove the file from the working directory and stages the deletion.
+
+        git rm file
+
+###Git tags
+
+List all tags.
+
+        git tag
+
+Add tag to current commit.
+
+        git tag -a v1.0 -m "v1.0 of file|project|etc"
+
+Add tag to SHA commit.
+
+        git tag -a v1.0 -m "v1.0 of file|project|etc" SHA
+
+Displays detail about tag v1.0.
+ 
+        git show v1.0
+
+Delete tag v1.0.
+
+        git tag -d v1.0
+
+###List git configuration
+
+        git config -l
+
+###Configure difftool
+
+        git config --global diff.tool gvimdiff
+        git config --global difftool.prompt false
+        git config --global alias.d difftool
+
+##Remote
+
 Remote can be another server, cloud server, GitHub, etc
 
-GitHub:
-    Sign on GitHub and create repository for git_notes.
+###View existing remotes
 
-    Associate local repository with GitHub repository:
-        git remote add server https://github.com/mr-billyu/git_notes.git
-
-    View existing remotes
         git remote -v
 
-    Rename remote
-        git remote rename old_name new_name
-        Example: git remote rename origin server
+###Rename remote
 
-    Push local branches to GitHub repository:
+Rename remote origin to server.
+
+        git remote rename origin server
+
+###GitHub
+
+Sign on GitHub and create repository for git_notes.
+
+####Associate local repository with GitHub repository.
+
+        git remote add server https://github.com/mr-billyu/git_notes.git
+
+####Push local branches to GitHub repository.
+
         git push server master
         git push server develop
 
-Clone a repository:
-    Change to the directory that will be the parent of the clone.
-    ie. ~/Applications
+####Clone a repository
+
+Change to the directory that will be the parent of the clone.  ie. ~/Applications
 
         git clone url
 
-    The clone directory will have been created under the parent 
-    directory.  ie. ~/Applications/clone_dir
+The clone directory will have been created under the parent directory.  ie. ~/Applications/clone_dir
 
+##Git Reference
 
+<https://git-scm.com/docs/>
 
